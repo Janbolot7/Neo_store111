@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/api/typeOfProduct")//v1
+@RequestMapping("/api/vv/typeOfProduct")//v1
 @AllArgsConstructor
 public class TypeOfProductController {
     private final TypeOfProductService categoryService;

@@ -55,7 +55,8 @@
 <body>
 <div class="login-form">
     <h2>Login</h2>
-    <form action="loginServlet" method="post">
+<!--    <form action="loginServlet" method="post">-->
+    <form name="f" method="POST" action="/process_login">
         <input type="hidden" name="_csrf" th:name="${_csrf}"/>
         <label for="username">Введите email пользователя:</label>
         <input type="text" name="username" id="username" required><br>

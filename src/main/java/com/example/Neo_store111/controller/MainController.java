@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping("/api")
+@RequestMapping("/api/to")
     public class MainController {
 
     @GetMapping("/main")

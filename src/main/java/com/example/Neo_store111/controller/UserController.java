@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/vv/users")
 @AllArgsConstructor
 public class UserController {
     private final UserService service;
@@ -37,6 +37,4 @@ public class UserController {
         return service.updateUserInfoById(id, userInfo);
     }
     // Здесь заканчиваются контроллеры для USER
-
-    // -----------------------------------------
 }
