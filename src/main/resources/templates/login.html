@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .login-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-form h2 {
+            text-align: center;
+        }
+        .login-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"],
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        .login-form input[type="submit"] {
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .login-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="login-form">
+    <h2>Login</h2>
+    <form action="loginServlet" method="post">
+        <input type="hidden" name="_csrf" th:name="${_csrf}"/>
+        <label for="username">Введите email пользователя:</label>
+        <input type="text" name="username" id="username" required><br>
+
+        <label for="password">Введите пароль:</label>
+        <input type="password" name="password" id="password" required><br>
+
+        <input type="submit" value="Login">
+
+        <div th:if="${param.error}" class="error-message">
+            Неправильный email или пароль!
+        </div>
+    </form>
+</div>
+</body>
+</html>
