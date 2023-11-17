@@ -1,12 +1,12 @@
 package com.example.Neo_store111.model;
 
-import jakarta.persistence.*;
 import jdk.jfr.Name;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import java.util.List;
 
 @Data @Builder
@@ -23,6 +23,6 @@ public class TypeOfProduct {
         @Column(unique = true, name = "category_name")
         private String typeName;
 
-        @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+        @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
         private List<Product> products;
 }

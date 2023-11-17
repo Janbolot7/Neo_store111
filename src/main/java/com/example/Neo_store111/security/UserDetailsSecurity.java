@@ -1,11 +1,13 @@
 package com.example.Neo_store111.security;
 
 import com.example.Neo_store111.model.User;
+import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
+@Getter
 public class UserDetailsSecurity implements UserDetails{
     private final User user;
 
@@ -48,7 +50,4 @@ public class UserDetailsSecurity implements UserDetails{
         return true;
     }
 
-    public User getUser() {
-        return this.user;
-    }
 }

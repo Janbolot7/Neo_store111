@@ -1,13 +1,13 @@
 package com.example.Neo_store111.model;
 
 import com.example.Neo_store111.model.Enum.MethodOfPurchases;
-import jakarta.persistence.*;
 import jdk.jfr.Name;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import java.util.List;
 
 @Data @Builder

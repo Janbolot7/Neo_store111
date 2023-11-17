@@ -3,11 +3,11 @@ package com.example.Neo_store111.model;
 import com.example.Neo_store111.dto.UserInfo;
 import com.example.Neo_store111.model.Enum.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 import jdk.jfr.Name;
 import lombok.*;
 
+import javax.persistence.*;
+import javax.validation.constraints.Email;
 import java.util.List;
 
 @Data

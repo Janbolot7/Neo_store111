@@ -15,7 +15,7 @@ public class TypeOfProductService {
     private final TypeOfProductRepository typeOfProductRepository;
 
     public TypeOfProduct checkTypeOnExistAndReturn(Long id) {
-        return typeOfProductRepository.findAllByCategoryId(id).orElseThrow(
+        return typeOfProductRepository.findAllByTypeId(id).orElseThrow(
                 () -> new NotFoundException("Category was not found!"));
     }
 
@@ -29,7 +29,7 @@ public class TypeOfProductService {
 
     public ResponseEntity<Object> createTypeOfProduct(TypeOfProductInfo categoryInfo) {
         ResultMod resultMod = new ResultMod();
-        if (typeOfProductRepository.findAllByCategoryName(categoryInfo.getTypeName()).isPresent()) {
+        if (typeOfProductRepository.findAllByTypeName(categoryInfo.getTypeName()).isPresent()) {
             resultMod.setResult("Category already exist!");
             return ResponseEntity.ok(resultMod.getResult());
         }

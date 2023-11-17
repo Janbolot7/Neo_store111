@@ -1,10 +1,10 @@
 package com.example.Neo_store111.model;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import jdk.jfr.Name;
 import lombok.*;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Data
@@ -38,6 +38,6 @@ public class Product {
     @ManyToOne(fetch = FetchType.EAGER)
     private TypeOfProduct typeOfProduct;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "product", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "product", cascade = CascadeType.ALL)
     private List<OrderDetails> orderDetails;
 }

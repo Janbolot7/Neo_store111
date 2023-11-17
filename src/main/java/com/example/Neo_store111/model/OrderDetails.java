@@ -1,11 +1,12 @@
 package com.example.Neo_store111.model;
 
-import jakarta.persistence.*;
 import jdk.jfr.Name;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 @Data @Builder
 @AllArgsConstructor
@@ -28,6 +29,6 @@ public class OrderDetails {
     @ManyToOne(fetch = FetchType.EAGER)
     private Order order;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Product product;
 }

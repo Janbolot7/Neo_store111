@@ -3,9 +3,9 @@ package com.example.Neo_store111.controller;
 import com.example.Neo_store111.dto.OrderDto;
 import com.example.Neo_store111.dto.OrderInfo;
 import com.example.Neo_store111.service.OrderService;
-import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

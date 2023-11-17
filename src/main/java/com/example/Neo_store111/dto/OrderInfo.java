@@ -1,10 +1,12 @@
 package com.example.Neo_store111.dto;
 
 import com.example.Neo_store111.model.Enum.MethodOfPurchases;
-import jakarta.persistence.Embeddable;
 import lombok.*;
 
-@Data @Builder
+import javax.persistence.Embeddable;
+
+@Data
+@Builder
 @Embeddable
 @AllArgsConstructor
 @NoArgsConstructor

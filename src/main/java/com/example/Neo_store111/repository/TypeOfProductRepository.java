@@ -7,9 +7,9 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 @Repository
 public interface TypeOfProductRepository extends JpaRepository<TypeOfProduct, Long> {
-        Optional<TypeOfProduct> findAllByCategoryName(String typeName);
-        Optional<TypeOfProduct> findCategoryByCategoryId(Long typeId);
-        Optional<TypeOfProduct> findAllByCategoryId(Long typeId);
+        Optional<TypeOfProduct> findAllByTypeName(String typeName);
+        //Optional<TypeOfProduct> findCategoryByCategoryId(Long typeId);
+        Optional<TypeOfProduct> findAllByTypeId(Long typeId);
         //@Query(add script)
-        void deleteCategoryByCategoryName(String typeName);
+        //void deleteCategoryByCategoryName(String typeName);
 }
